@@ -1,17 +1,17 @@
 package com.example.demo.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class HelloController {
 	
-	@GetMapping("/")
+	@GetMapping("/test")
 	public String Welcome() {
-		return "Welcome...... :)";
+		return "index";
 	}
 	
-    @GetMapping("/test")
+    @GetMapping("/hello")
     public String hello() {
         return "Spring Boot App Deployed on Render Successfully!";
     }

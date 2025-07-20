@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Practo | Book Lab Diagnostic Test</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+	<div th:include="components/navbar ::navbar"></div>
+	<!--========Lab TEsts===========-->
+	<div class="container">
+		<div class="container-fluid p-5 row">
+			<div class="col-md-3 text-center">
+				<img th:src="@{/images/book-labtest.png}"><br>
+				<span class="text-muted h5 mr-4">Book Lab Test</span>
+			</div>
+			<div class="col-md-3 text-center">
+				<img th:src="@{/images/popular-hc.png}"><br>
+				<span class="text-muted h5 mr-4">Popular Health Checks</span>
+			</div>
+			<div class="col-md-3 text-center">
+				<img th:src="@{/images/radiology.png}"><br>
+				<span class="text-muted h5 mr-4">X-Rays,Scans & MRI</span>
+			</div>
+			<div class="col-md-3 text-center">
+				<img th:src="@{/images/radiology.png}"><br>
+				<span class="text-muted h5 mr-4">Find Labs/Hospitals</span>
+			</div>
+		</div>
+	</div>
+	<!--========Banner========-->
+	<div>
+		<div class="container-fluid row text-center p-5">
+			<div class="col-md-4">
+				<img th:src="@{/images/sameday.png}" style="width: 360px;">
+			</div>
+			<div class="col-md-4">
+				<img th:src="@{/images/labs-surgery-banner.jpg}" style="width: 360px;">
+			</div>
+			<div class="col-md-4">
+				<img th:src="@{/images/diagnostic-banner.png}" style="width: 360px;">
+			</div>
+		</div>
+	</div>
+	<!--========Lab Tests===========-->
+	<h2 class="mx-5">Book an appointment for Diagnostics Tests</h2>
+	<div class="container my-4">
+		<div class="card mb-3">
+			<div class="card-body">
+				<div class="d-flex justify-content-between align-items-center">
+					<div>
+						<h5 class="card-title">Thyroid Profile (T3,T4 & TSH) - Serum</h5>
+						<p class="text-muted mb-1"><small>Reports in 24 - 48 Hrs</small></p>
+						<p class="mb-0"><small>Available at: <span class="text-danger">🏠 Home</span> <span
+									class="text-primary">💼 Center</span></small></p>
+					</div>
+					<div class="text-end">
+						<p class="text-muted text-decoration-line-through">₹ 799/-</p>
+						<p class="fw-bold text-success">₹ 549/- <span class="badge bg-light text-success">31% OFF</span>
+						</p>
+						<a href="/labTests" class="btn btn-outline-primary">More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="text-center container-fluid p-4">
+		<a class="btn btn-outline-primary" href="loginForm">Login</a>
+		<a class="btn btn-outline-warning" href="registrationForm">Register</a>
+	</div>
+	<hr>
+
+<!--========Footer============-->
+<div th:include="components/footer :: footer" class="p-5" style="background-color: #28328C; color: white;"  id="contact"></div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
