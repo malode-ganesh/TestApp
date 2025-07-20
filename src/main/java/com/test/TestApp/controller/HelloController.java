@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    @GetMapping("/")
+    @GetMapping("/test")
     public String hello() {
         return "✅ Spring Boot App Deployed on Render Successfully!";
     }
