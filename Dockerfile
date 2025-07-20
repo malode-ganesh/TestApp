@@ -1,13 +1,21 @@
-# Dockerfile
+# ------------ Stage 1: Build the JAR -------------
+FROM maven:3.9.5-eclipse-temurin-17 AS builder
 
-# Use OpenJDK 17 slim image
-FROM openjdk:17-jdk-slim
-
-# Set working directory
 WORKDIR /app
 
-# Copy jar to container
-COPY target/*.jar app.jar
+# Copy all source files
+COPY . .
 
-# Run the jar
+# Build the application
+RUN mvn clean package -DskipTests
+
+# ------------ Stage 2: Run the JAR ----------------
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
+# Copy the built jar from the builder image
+COPY --from=builder /app/target/*.jar app.jar
+
+# Run the app
 ENTRYPOINT ["java", "-jar", "app.jar"]
